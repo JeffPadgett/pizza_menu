@@ -9,7 +9,7 @@
     <title>Pizza Topper</title>
 </head>
 <body class="pizza-background">
-        <div class="container con-frame bg-white" id='entire-form'>
+        <form class="container con-frame bg-white" id='entire-form'>
             <!-- title Row -->
             <div class="row row-frame title-row">
                 <div class="col-md-12 mx-auto col-frame">
@@ -23,18 +23,20 @@
                     <div class="row row-frame">
                         <div class="col-md-4 col-sm-4 col-frame">
                             <h5 class="text-center">Pizza Size</h5> <!--I need to figure out how to resize-->
-                            <div class="radio">
-                                    <label><input type="radio" name="optradio">Personal</label>
-                                  </div>
-                                  <div class="radio">
-                                    <label><input type="radio" name="optradio">Medium</label>
-                                  </div>
-                                  <div class="radio">
-                                    <label><input type="radio" name="optradio">Large</label>
-                                  </div>
-                                  <div class="radio">
-                                    <label><input type="radio" name="optradio">Extra Large</label>
-                                  </div>
+                            <ul class="pizza-selection">
+                                <div class="radio">
+                                    <label><input value="Personal"type="radio" name="optradio">Personal</label>
+                                </div>
+                                <div class="radio">
+                                    <label><input value="Medium" type="radio" name="optradio">Medium</label>
+                                </div>
+                                <div class="radio">
+                                    <label><input value="Large" type="radio" name="optradio">Large</label>
+                                </div>
+                                <div class="radio">
+                                    <label><input value="Extra Large" type="radio" name="optradio">Extra Large</label>
+                                </div>
+                            </ul>
                                   <!-- End of Pizza Size Col -->
 
                                   <!-- Meat Toppings Col -->
@@ -43,50 +45,50 @@
                         <div class="col-md-4 col-sm-4 col-frame">
                             <h5 class="text-center">Meat Toppings</h5>
                             <div class="checkbox d-inline-block">
-                                <label><input type="checkbox" value="">Pepperoni</label>
+                                <label><input type="checkbox" name="meatTopping" value="Pepperoni">Pepperoni</label>
                             </div>
                             <div class="checkbox d-inline-block">
-                                <label><input type="checkbox" value="">Sausage</label>
+                                <label><input type="checkbox" name="meatTopping" value="Sausage">Sausage</label>
                             </div>
                             <div class="checkbox d-inline-block">
-                                <label><input type="checkbox" value="">Canadian Bacon</label>
+                                <label><input type="checkbox" name="meatTopping" value="Canadian Bacon">Canadian Bacon</label>
                             </div>
                             <div class="checkbox d-inline-block">
-                                <label><input type="checkbox" value="">Ground Beef</label>
+                                <label><input type="checkbox" name="meatTopping" value="Ground Beef">Ground Beef</label>
                             </div>
                             <div class="checkbox d-inline-block">
-                                <label><input type="checkbox" value="">Anchovy</label>
+                                <label><input type="checkbox" name="meatTopping" value="Anchovy">Anchovy</label>
                             </div>
                             <div class="checkbox d-inline-block">
-                                <label><input type="checkbox" value="">Chicken</label>
+                                <label><input type="checkbox" name="meatTopping" value="Chicken">Chicken</label>
                             </div>
                         </div>
                         <!-- End of Meat Toppings -->
                         <div class="col-md-4 col-sm-4 col-frame">
                                 <h5 class="text-center">Veggies</h5>
                                 <div class="checkbox d-inline-block">
-                                    <label><input type="checkbox" value="">Tomatoes</label>
+                                    <label><input type="checkbox" name="veggieTopping" value="Tomatoes">Tomatoes</label>
                                 </div>
                                 <div class="checkbox d-inline-block">
-                                    <label><input type="checkbox" value="">Onions</label>
+                                    <label><input type="checkbox" name="veggieTopping" value="Onions">Onions</label>
                                 </div>
                                 <div class="checkbox d-inline-block">
-                                    <label><input type="checkbox" value="">Olives</label>
+                                    <label><input type="checkbox" name="veggieTopping" value="Olives">Olives</label>
                                 </div>
                                 <div class="checkbox d-inline-block">
-                                    <label><input type="checkbox" value="">Green Peppers</label>
+                                    <label><input type="checkbox" name="veggieTopping" value="Green Peppers">Green Peppers</label>
                                 </div>
                                 <div class="checkbox d-inline-block">
-                                    <label><input type="checkbox" value="">Mushrooms</label>
+                                    <label><input type="checkbox" name="veggieTopping" value="Mushrooms">Mushrooms</label>
                                 </div>
                                 <div class="checkbox d-inline-block">
-                                    <label><input type="checkbox" value="">Pineapple</label>
+                                    <label><input type="checkbox" name="veggieTopping" value="Pineapple">Pineapple</label>
                                 </div>
                                 <div class="checkbox d-inline-block">
-                                    <label><input type="checkbox" value="">Spinach</label>
+                                    <label><input type="checkbox" name="veggieTopping" value="Spinach">Spinach</label>
                                 </div>
                                 <div class="checkbox d-inline-block">
-                                    <label><input type="checkbox" value="">Jalapeno</label>
+                                    <label><input type="checkbox" name="veggieTopping" value="Jalapeno">Jalapeno</label>
                                 </div>
                         </div>
                     </div>
@@ -97,13 +99,13 @@
                         <div class="col-md-4 col-sm-4 col-frame">
                                 <h5 class="text-center">Cheese Options</h5> <!--I need to figure out how to resize-->
                                 <div class="radio">
-                                        <label><input type="radio" name="optradio">Regular Cheese</label>
+                                        <label><input type="radio" name="optcheese">Regular Cheese</label>
                                       </div>
                                       <div class="radio">
-                                        <label><input type="radio" name="optradio">No Cheese</label>
+                                        <label><input type="radio" name="optcheese">No Cheese</label>
                                       </div>
                                       <div class="radio">
-                                        <label><input type="radio" name="optradio">Extra Cheese</label>
+                                        <label><input type="radio" name="optcheese">Extra Cheese</label>
                                       </div>
 
 
@@ -127,34 +129,34 @@
                         <div class="col-md-4 col-sm-4 col-frame">
                                 <h5 class="text-center">Sauce Options</h5>
                                 <div class="radio">
-                                        <label><input type="radio" name="optradio">Marinara Sauce</label>
+                                        <label><input type="radio" name="optsauce">Marinara Sauce</label>
                                       </div>
                                       <div class="radio">
-                                        <label><input type="radio" name="optradio">White Sauce</label>
+                                        <label><input type="radio" name="optsauce">White Sauce</label>
                                       </div>
                                       <div class="radio">
-                                        <label><input type="radio" name="optradio">Barbeque Sauce</label>
+                                        <label><input type="radio" name="optsauce">Barbeque Sauce</label>
                                       </div>
                                       <div class="radio">
-                                        <label><input type="radio" name="optradio">No Sauce</label>
+                                        <label><input type="radio" name="optsauce">No Sauce</label>
                                       </div>
                                       
                         </div>
                         <div class="col-md-4 col-sm-4 col-frame d-inline-block">
                                 <h5 class="text-center">Crust Options</h5>
                                 <div class="radio d-inline-block">
-                                    <label><input type="radio" name="optradio" >Plain Crust&nbsp;&nbsp;&nbsp;</label>
+                                    <label><input type="radio" name="optcrust" >Plain Crust&nbsp;&nbsp;&nbsp;</label>
                                 </div>
                                 <div class="radio d-inline-block">
-                                    <label><input type="radio" name="optradio">Garlic Butter Crust</label>
+                                    <label><input type="radio" name="optcrust">Garlic Butter Crust</label>
                                 </div>
                                 <div class="radio">
-                                    <label><input type="radio" name="optradio">Cheese Stuffed Crust</label>
+                                    <label><input type="radio" name="optcrust">Cheese Stuffed Crust</label>
                                 </div>
                                 <div class="radio">
-                                    <label><input type="radio" name="optradio">Spicy Crust</label>
+                                    <label><input type="radio" name="optcrust">Spicy Crust</label>
                                 </div>
-                                    <label><input type="radio" name="optradio">House Special Crust</label>
+                                    <label><input type="radio" name="optcrust">House Special Crust</label>
                         </div>
                                 <div class="col-md-4 col-sm-4 col-frame">
                                         <img class='wheel' src="images/load03-512.png">
@@ -170,23 +172,23 @@
                             <div class="form-group mb-0">
                                 <div class="input-group reciept-items">
                                     <span class="input-group-addon">Pizza Size:&nbsp;&nbsp;</span>
-                                    <input type="number" class="form-control" id="pizza-price" disabled>
+                                    <input type="text" class="form-control" id="pizza-price" disabled>
                                 </div>
                                 <div class="input-group reciept-items">
                                     <span class="input-group-addon">Cheese:&nbsp;&nbsp;</span>
-                                    <input type="number" class="form-control" id="cheese-price" disabled>
+                                    <input type="text" class="form-control" id="cheese-price" disabled>
                                 </div>
                                 <div class="input-group reciept-items">
                                     <span class="input-group-addon">Sauce:&nbsp;&nbsp;</span>
-                                    <input type="number" class="form-control" id="sauce-price" disabled>
+                                    <input type="text" class="form-control" id="sauce-price" disabled>
                                 </div>
                                 <div class="input-group reciept-items">
                                     <span class="input-group-addon">Crust:&nbsp;&nbsp;</span>
-                                    <input type="number" class="form-control" id="crust-Price" disabled>
+                                    <input type="text" class="form-control" id="crust-Price" disabled>
                                 </div>
                                 <div class="input-group">
                                         <span class="input-group-addon toppings-room">Toppings:&nbsp;&nbsp;</span>
-                                        <input type="number" class="form-control toppings-padding" id="Toppings Price" disabled>
+                                        <input type="text" class="form-control toppings-padding" id="Toppings Price" disabled>
                                     </div>                                    
                             </div>
                         </div>
@@ -197,7 +199,7 @@
                                 
                                       
                                 </div>
-                            </div>
+                            </form>
                     </div>
                     
                     
