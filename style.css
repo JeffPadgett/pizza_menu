@@ -1,0 +1,72 @@
+.pizza-background {
+    background-image: url("/images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    color: black;
+    
+}
+
+
+.con-frame {
+    border: 1px solid gold;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.row-frame {
+    border: 1px solid red;
+    padding: 3px;
+    height: 220px;
+}
+
+.col-frame {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+/* .meats-checkbox {
+    display: inline-block;
+    zoom: 1;
+    display: inline;
+} */
+
+.meats-checkbox2 {
+    
+}
+
+.my-button {
+    width: 9em;
+}
+
+.blue-button {
+    width: 9em;
+}
+
+.title-row {
+    height:90px;
+}
+
+.reciept-items {
+    height: 25px;
+}
+
+.toppings-room {
+    height: 35px;
+    padding: 0px;
+}
+
+.toppings-padding {
+    padding:0px;
+    height: 65px;
+}
+
+.price-corner {
+    height: 160px;
+}
+
+.wheel {
+    height: 190px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}

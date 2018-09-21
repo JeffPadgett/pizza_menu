@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Pizza Topper</title>
+</head>
+<body class="pizza-background">
+        <div class="container con-frame bg-white" id='entire-form'>
+            <!-- title Row -->
+            <div class="row row-frame title-row">
+                <div class="col-md-12 mx-auto col-frame">
+                    <div class="text-center">
+                        <h1 class="heading display-5 text-dark">Pizza Topper</h1>
+                    </div>
+                 </div>
+                    </div>
+                    <!-- End title row -->
+                     <!-- First col that will hold Size, Meats, and Veggies in a horiziontal row -->
+                    <div class="row row-frame">
+                        <div class="col-md-4 col-sm-4 col-frame">
+                            <h5 class="text-center">Pizza Size</h5> <!--I need to figure out how to resize-->
+                            <div class="radio">
+                                    <label><input type="radio" name="optradio">Personal</label>
+                                  </div>
+                                  <div class="radio">
+                                    <label><input type="radio" name="optradio">Medium</label>
+                                  </div>
+                                  <div class="radio">
+                                    <label><input type="radio" name="optradio">Large</label>
+                                  </div>
+                                  <div class="radio">
+                                    <label><input type="radio" name="optradio">Extra Large</label>
+                                  </div>
+                                  <!-- End of Pizza Size Col -->
+
+                                  <!-- Meat Toppings Col -->
+                        </div>
+
+                        <div class="col-md-4 col-sm-4 col-frame">
+                            <h5 class="text-center">Meat Toppings</h5>
+                            <div class="checkbox d-inline-block">
+                                <label><input type="checkbox" value="">Pepperoni</label>
+                            </div>
+                            <div class="checkbox d-inline-block">
+                                <label><input type="checkbox" value="">Sausage</label>
+                            </div>
+                            <div class="checkbox d-inline-block">
+                                <label><input type="checkbox" value="">Canadian Bacon</label>
+                            </div>
+                            <div class="checkbox d-inline-block">
+                                <label><input type="checkbox" value="">Ground Beef</label>
+                            </div>
+                            <div class="checkbox d-inline-block">
+                                <label><input type="checkbox" value="">Anchovy</label>
+                            </div>
+                            <div class="checkbox d-inline-block">
+                                <label><input type="checkbox" value="">Chicken</label>
+                            </div>
+                        </div>
+                        <!-- End of Meat Toppings -->
+                        <div class="col-md-4 col-sm-4 col-frame">
+                                <h5 class="text-center">Veggies</h5>
+                                <div class="checkbox d-inline-block">
+                                    <label><input type="checkbox" value="">Tomatoes</label>
+                                </div>
+                                <div class="checkbox d-inline-block">
+                                    <label><input type="checkbox" value="">Onions</label>
+                                </div>
+                                <div class="checkbox d-inline-block">
+                                    <label><input type="checkbox" value="">Olives</label>
+                                </div>
+                                <div class="checkbox d-inline-block">
+                                    <label><input type="checkbox" value="">Green Peppers</label>
+                                </div>
+                                <div class="checkbox d-inline-block">
+                                    <label><input type="checkbox" value="">Mushrooms</label>
+                                </div>
+                                <div class="checkbox d-inline-block">
+                                    <label><input type="checkbox" value="">Pineapple</label>
+                                </div>
+                                <div class="checkbox d-inline-block">
+                                    <label><input type="checkbox" value="">Spinach</label>
+                                </div>
+                                <div class="checkbox d-inline-block">
+                                    <label><input type="checkbox" value="">Jalapeno</label>
+                                </div>
+                        </div>
+                    </div>
+                    <!-- End of First row -->
+
+                    <!-- beginning of 2nd row that will only hold one cheese form element with radio buttons -->
+                    <div class="row row-frame">
+                        <div class="col-md-4 col-sm-4 col-frame">
+                                <h5 class="text-center">Cheese Options</h5> <!--I need to figure out how to resize-->
+                                <div class="radio">
+                                        <label><input type="radio" name="optradio">Regular Cheese</label>
+                                      </div>
+                                      <div class="radio">
+                                        <label><input type="radio" name="optradio">No Cheese</label>
+                                      </div>
+                                      <div class="radio">
+                                        <label><input type="radio" name="optradio">Extra Cheese</label>
+                                      </div>
+
+
+                                      <!-- Buttons -->
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-frame d-flex justify-content-center">
+                                <input type="submit" form="entire-form" class="btn btn-primary btn-lg blue-button" value="Make Pizza!" id="make-pizza">
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-frame d-flex justify-content-center">
+                                <input type="submit" class="btn btn-danger btn-lg my-button" value="Cancel">
+                        </div>
+                                    <!-- End of buttons-->
+
+
+                    </div>
+                    <!-- End of 2nd row -->
+
+
+                    <!-- 3rd row -->
+                    <div class="row row-frame">
+                        <div class="col-md-4 col-sm-4 col-frame">
+                                <h5 class="text-center">Sauce Options</h5>
+                                <div class="radio">
+                                        <label><input type="radio" name="optradio">Marinara Sauce</label>
+                                      </div>
+                                      <div class="radio">
+                                        <label><input type="radio" name="optradio">White Sauce</label>
+                                      </div>
+                                      <div class="radio">
+                                        <label><input type="radio" name="optradio">Barbeque Sauce</label>
+                                      </div>
+                                      <div class="radio">
+                                        <label><input type="radio" name="optradio">No Sauce</label>
+                                      </div>
+                                      
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-frame d-inline-block">
+                                <h5 class="text-center">Crust Options</h5>
+                                <div class="radio d-inline-block">
+                                    <label><input type="radio" name="optradio" >Plain Crust&nbsp;&nbsp;&nbsp;</label>
+                                </div>
+                                <div class="radio d-inline-block">
+                                    <label><input type="radio" name="optradio">Garlic Butter Crust</label>
+                                </div>
+                                <div class="radio">
+                                    <label><input type="radio" name="optradio">Cheese Stuffed Crust</label>
+                                </div>
+                                <div class="radio">
+                                    <label><input type="radio" name="optradio">Spicy Crust</label>
+                                </div>
+                                    <label><input type="radio" name="optradio">House Special Crust</label>
+                        </div>
+                                <div class="col-md-4 col-sm-4 col-frame">
+                                        <img class='wheel' src="images/load03-512.png">
+                                </div>
+
+                    </div>
+                    <!-- End of 3rd Row -->
+
+                    <!-- Reciept Form -->
+                    <div class="row row-frame">
+                        <div class="col-md-8 col-sm-8 col-frame pb-0">
+                            <h5 class="text-center ">Reciept</h5>
+                            <div class="form-group mb-0">
+                                <div class="input-group reciept-items">
+                                    <span class="input-group-addon">Pizza Size:&nbsp;&nbsp;</span>
+                                    <input type="number" class="form-control" id="pizza-price" disabled>
+                                </div>
+                                <div class="input-group reciept-items">
+                                    <span class="input-group-addon">Cheese:&nbsp;&nbsp;</span>
+                                    <input type="number" class="form-control" id="cheese-price" disabled>
+                                </div>
+                                <div class="input-group reciept-items">
+                                    <span class="input-group-addon">Sauce:&nbsp;&nbsp;</span>
+                                    <input type="number" class="form-control" id="sauce-price" disabled>
+                                </div>
+                                <div class="input-group reciept-items">
+                                    <span class="input-group-addon">Crust:&nbsp;&nbsp;</span>
+                                    <input type="number" class="form-control" id="crust-Price" disabled>
+                                </div>
+                                <div class="input-group">
+                                        <span class="input-group-addon toppings-room">Toppings:&nbsp;&nbsp;</span>
+                                        <input type="number" class="form-control toppings-padding" id="Toppings Price" disabled>
+                                    </div>                                    
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-frame">
+                            <h5 class="text-center">Total Price</h5>
+                            <input type="number" class="form-control price-corner" id="total-Price" disabled>
+                        </div>
+                                
+                                      
+                                </div>
+                            </div>
+                    </div>
+                    
+                    
+
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>
