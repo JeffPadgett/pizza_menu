@@ -70,3 +70,27 @@
     margin-left: auto;
     margin-right: auto
 }
+
+.veggie-list {
+    padding-left: 0px;
+}
+
+.meat-list {
+    padding-left: 0px;
+}
+
+.pizza-list {
+    padding-left: 0px;
+}
+
+.cheese-list {
+    padding-left: 0px;
+}
+
+.sauce-list {
+    padding-left: 0px;
+}
+
+.crust-list {
+    padding-left: 0px;
+}
