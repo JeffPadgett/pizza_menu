@@ -26,16 +26,16 @@
                             <h5 class="text-center">Pizza Size</h5> <!--I need to figure out how to resize-->
                             <ul class="pizza-list">
                                 <div class="radio">
-                                    <label><input value="Personal"type="radio" name="pizzachoice" >Personal</label>
+                                    <label><input class="pizza-choice" value="Personal" type="radio" name="pizzachoice">Personal</label>
                                 </div>
                                 <div class="radio">
-                                    <label><input value="Medium" type="radio" name="pizzachoice" >Medium</label>
+                                    <label><input class="pizza-choice" value="Medium" type="radio" name="pizzachoice">Medium</label>
                                 </div>
                                 <div class="radio">
-                                    <label><input value="Large" type="radio" name="pizzachoice">Large</label>
+                                    <label><input class="pizza-choice" value="Large" type="radio" name="pizzachoice">Large</label>
                                 </div>
                                 <div class="radio">
-                                    <label><input value="Extra Large" type="radio" name="pizzachoice">Extra Large</label>
+                                    <label><input class="pizza-choice" value="Extra Large" type="radio" name="pizzachoice">Extra Large</label>
                                 </div>
                             </ul>
                                   <!-- End of Pizza Size Col -->
@@ -115,13 +115,13 @@
 
                             <ul class="cheese-list">
                                 <div class="radio">
-                                    <label><input type="radio" name="optcheese" value="Regular Cheese">Regular Cheese</label>
+                                    <label><input class="cheese-choice" type="radio" name="optcheese" value="Regular Cheese">Regular Cheese</label>
                                 </div>
                                 <div class="radio">
-                                    <label><input type="radio" name="optcheese" value="No Cheese">No Cheese</label>
+                                    <label><input class="cheese-choice" type="radio" name="optcheese" value="No Cheese">No Cheese</label>
                                 </div>
                                 <div class="radio">
-                                    <label><input type="radio" name="optcheese" value="Extra Cheese">Extra Cheese</label>
+                                    <label><input class="cheese-choice" type="radio" name="optcheese" value="Extra Cheese">Extra Cheese</label>
                                 </div>
                             </ul>
 
@@ -132,11 +132,11 @@
                         <!-- Buttons -->
 
                         <div class="col-md-4 col-sm-4 col-frame d-flex justify-content-center">
-                                <input type="submit" form="entire-form" class="btn btn-primary btn-lg blue-button" value="Make Pizza!" id="make-pizza">
+                                <input type="button" form="entire-form" class="btn btn-primary btn-lg blue-button" value="Make Pizza" id="make-pizza">
                         </div>
 
                         <div class="col-md-4 col-sm-4 col-frame d-flex justify-content-center">
-                                <input type="" class="btn btn-danger btn-lg my-button" value="Cancel">
+                                <input type="submit" class="btn btn-danger btn-lg my-button" value="Cancel">
                         </div>
 
                         <!-- End of buttons-->
@@ -152,16 +152,16 @@
                                 <h5 class="text-center">Sauce Options</h5>
                                 <ul class="sauce-list">
                                     <div class="radio">
-                                        <label><input type="radio" name="optsauce" value="Marinara Sauce">Marinara Sauce</label>
+                                        <label><input class="sauce-choice" type="radio" name="optsauce" value="Marinara Sauce">Marinara Sauce</label>
                                     </div>
                                     <div class="radio">
-                                        <label><input type="radio" name="optsauce" value="White Sauce">White Sauce</label>
+                                        <label><input class="sauce-choice" type="radio" name="optsauce" value="White Sauce">White Sauce</label>
                                     </div>
                                     <div class="radio">
-                                        <label><input type="radio" name="optsauce" value="Barbeque Sauce">Barbeque Sauce</label>
+                                        <label><input class="sauce-choice" type="radio" name="optsauce" value="Barbeque Sauce">Barbeque Sauce</label>
                                     </div>
                                     <div class="radio">
-                                        <label><input type="radio" name="optsauce" value="No Sauce">No Sauce</label>
+                                        <label><input class="sauce-choice" type="radio" name="optsauce" value="No Sauce">No Sauce</label>
                                     </div>
                                 </ul>
                                       
@@ -170,19 +170,19 @@
                             <h5 class="text-center">Crust Options</h5>
                             <ul class="crust-list">
                                 <div class="radio d-inline-block">
-                                    <label><input type="radio" name="optcrust" value="Plain Crust">Plain Crust&nbsp;&nbsp;&nbsp;</label>
+                                    <label><input class="crust-choice" type="radio" name="optcrust" value="Plain Crust">Plain Crust&nbsp;&nbsp;&nbsp;</label>
                                 </div>
                                 <div class="radio d-inline-block">
-                                    <label><input type="radio" name="optcrust" value="Garlic Butter Crust">Garlic Butter Crust</label>
+                                    <label><input class="crust-choice" type="radio" name="optcrust" value="Garlic Butter Crust">Garlic Butter Crust</label>
                                 </div>
                                 <div class="radio">
-                                    <label><input type="radio" name="optcrust" value="Cheese Stuffed Crust">Cheese Stuffed Crust</label>
+                                    <label><input class="crust-choice" type="radio" name="optcrust" value="Cheese Stuffed Crust">Cheese Stuffed Crust</label>
                                 </div>
                                 <div class="radio">
-                                    <label><input type="radio" name="optcrust" value="Spicy Crust">Spicy Crust</label>
+                                    <label><input class="crust-choice" type="radio" name="optcrust" value="Spicy Crust">Spicy Crust</label>
                                 </div>
                                 <div>
-                                    <label><input type="radio" name="optcrust" value="House Special Crust">House Special Crust</label>
+                                    <label><input class="crust-choice" type="radio" name="optcrust" value="House Special Crust">House Special Crust</label>
                                 </div>
                             </ul>
                     </div>
@@ -200,23 +200,23 @@
                             <div class="form-group mb-0">
                                 <div class="input-group reciept-items">
                                     <span class="input-group-addon">Pizza Size:&nbsp;&nbsp;</span>
-                                    <input type="text" class="form-control" id="pizza-price" value="" disabled>
+                                    <input type="text" class="form-control" id="size-reciept" value="" disabled>
                                 </div>
                                 <div class="input-group reciept-items">
                                     <span class="input-group-addon">Cheese:&nbsp;&nbsp;</span>
-                                    <input type="text" class="form-control" id="cheese-price" disabled>
+                                    <input type="text" class="form-control" id="cheese-reciept" value="" disabled>
                                 </div>
                                 <div class="input-group reciept-items">
                                     <span class="input-group-addon">Sauce:&nbsp;&nbsp;</span>
-                                    <input type="text" class="form-control" id="sauce-price" disabled>
+                                    <input type="text" class="form-control" id="sauce-reciept" value="" disabled>
                                 </div>
                                 <div class="input-group reciept-items">
                                     <span class="input-group-addon">Crust:&nbsp;&nbsp;</span>
-                                    <input type="text" class="form-control" id="crust-Price" disabled>
+                                    <input type="text" class="form-control" id="crust-reciept" value="" disabled>
                                 </div>
                                 <div class="input-group">
                                     <span class="input-group-addon toppings-room">Toppings:&nbsp;&nbsp;</span>
-                                    <input type="text" class="form-control toppings-padding" id="Toppings Price" disabled>
+                                    <input type="text" class="form-control toppings-padding" id="Toppings Price" value="" disabled>
                                 </div>                                    
                             </div>
                         </div>
@@ -228,7 +228,7 @@
                                 
                                       
                 
-        </form>
+                </form>
     </div>
                     
                     
