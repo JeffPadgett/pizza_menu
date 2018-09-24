@@ -1,5 +1,4 @@
 // Declare and devine UI variables
-console.log("loading js file")
 const form = document.querySelector('#entire-form');
 let selectedPizza = document.getElementsByClassName('pizza-choice');
 let selectedCheese = document.querySelector('input[name="optcheese"]:checked');
@@ -13,6 +12,8 @@ let selectedPizzaFinal;
 let selectedCheeseFinal;
 let selectedCrustFinal;
 let selectedSauceFinal;
+var sizePrice;
+
 
 
 makePizzaBtn.onclick = function(){
@@ -39,8 +40,8 @@ function getSelectedPizza(){
     var sizePrice;
     
     switch(selectedPizzaFinal){
-        default: sizePrice = 1.00;
-        break;
+        
+        
         
         case "Personal":
         sizePrice = 6.00;
@@ -57,9 +58,12 @@ function getSelectedPizza(){
         case "Extra Large":
         sizePrice = 16.00;
         break;
+        console.log(sizePrice);
     }
     
     document.getElementById('size-reciept').value = `${selectedPizzaFinal} price: $${sizePrice}`;
+
+   
 }
 
 function getSelectedCheese(){
@@ -165,33 +169,35 @@ function getSelectedSauce(){
         }
     }
 
-    var crustPrice;
+    var saucePrice;
     
-    switch(selectedCrustFinal){
-        default: crustPrice = 1.00;
+    switch(selectedSauceFinal){
+        
+        case "Marina Sauce":
+        saucePrice = 0.00 ;
         break;
         
-        case "Plain Crust":
-        crustPrice = 0.00 ;
+        case "White Sauce":
+        saucePrice = 0.00;   
         break;
         
-        case "Garlic Butter Crust":
-        crustPrice = 3.00;   
-        break;
-        
-        case "Cheese Stuffed Crust":
-        crustPrice = 3.00;
+        case "Barbeque Sauce":
+        saucePrice = 0.00;
         break;
 
-        case "Spicy Crust":
-        crustPrice = 3.00;
+        case "No Sauce":
+        saucePrice = 0.00;
 
-        case "House Special Crust":
-        crustPrice = 3.00;
+
+        
         
     }
 
-    document.getElementById('crust-reciept').value = `${selectedCrustFinal} price: $${crustPrice}`;
+    document.getElementById('sauce-reciept').value = `${selectedSauceFinal} price: $${saucePrice}`;
+
+    return saucePrice;
+
+
 
 
 
