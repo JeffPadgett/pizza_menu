@@ -58,10 +58,13 @@
 .toppings-padding {
     padding:0px;
     height: 65px;
+
 }
 
 .price-corner {
     height: 160px;
+    text-align: center;
+    font-size: 5em;
 }
 
 .wheel {
@@ -93,4 +96,10 @@
 
 .crust-list {
     padding-left: 0px;
+}
+
+#toppings-price {
+    font-size: 10px;
+    word-wrap: break-word;
+
 }

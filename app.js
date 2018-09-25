@@ -1,13 +1,13 @@
 // Declare and devine UI variables
 const form = document.querySelector('#entire-form');
-let selectedPizza = document.getElementsByClassName('pizza-choice');
-let selectedCheese = document.querySelector('input[name="optcheese"]:checked');
-let selectedSauce = document.querySelector('input[name="optsauce"]:checked');
-let selectedCrust = document.querySelector('input[name="optcrust"]:checked');
-let selectedMeats = document.querySelectorAll('input[name="meatTopping"]:checked');
-let selectedVeggies = document.querySelectorAll('input[name="veggieTopping"]:checked');
+// let selectedPizza = document.getElementsByClassName('pizza-choice');
+// let selectedCheese = document.querySelector('input[name="optcheese"]:checked');
+// let selectedSauce = document.querySelector('input[name="optsinputauce"]:checked');
+// let selectedCrust = document.querySelector('input[name="optcrust"]:checked');
+// let selectedMeats = document.querySelectorAll('input[name="meatTopping"]:checked');
+// let selectedVeggies = document.querySelectorAll('input[name="veggieTopping"]:checked');
 const makePizzaBtn = document.getElementById('make-pizza');
-const cancenBtn = document.querySelector('.my-button');
+const cancelBtn = document.getElementById('clear-button');
 let selectedPizzaFinal;
 let selectedCheeseFinal;
 let selectedCrustFinal;
@@ -15,6 +15,12 @@ let selectedSauceFinal;
 var sizePrice;
 var cheesePrice;
 var crustPrice;
+var fullPrice;
+var selectedVeggieFinal;
+var selectedMeatFinal;
+var selectedVeggieFinal;
+var toppingsFinal = '';
+
 
 
 
@@ -23,11 +29,17 @@ makePizzaBtn.onclick = function(){
     getSelectedCheese();
     getSelectedCrust();
     getSelectedSauce();
-    // getSelectedMeat();
-    // getSelectedVeggies();
+    getSelectedMeat();
+    getSelectedVeggies();
+    document.getElementById('toppings-price').value = `${toppingsFinal}`;
     getFullPrice();
 
 }
+cancelBtn.onclick = function()
+{
+    clearInput();
+}
+
 function getSelectedPizza(){
     var selectedPizza = document.getElementsByClassName('pizza-choice');
 
@@ -66,7 +78,7 @@ function getSelectedPizza(){
         console.log(sizePrice);
     }
     
-    document.getElementById('size-reciept').value = `${selectedPizzaFinal} price: $${sizePrice}`;
+    document.getElementById('size-reciept').value = `${selectedPizzaFinal} price: - $${sizePrice}`;
 
    
 }
@@ -103,7 +115,7 @@ function getSelectedCheese(){
         
     }
     
-    document.getElementById('cheese-reciept').value = `${selectedCheeseFinal} price: $${cheesePrice}`;
+    document.getElementById('cheese-reciept').value = `${selectedCheeseFinal} price: - $${cheesePrice}`;
 
 }
 
@@ -147,7 +159,7 @@ function getSelectedCrust(){
         
     }
 
-    document.getElementById('crust-reciept').value = `${selectedCrustFinal} price: $${crustPrice}`;
+    document.getElementById('crust-reciept').value = `${selectedCrustFinal} price: - $${crustPrice}`;
 
 
 }
@@ -192,68 +204,77 @@ function getSelectedSauce(){
         
     }
 
-    document.getElementById('sauce-reciept').value = `${selectedSauceFinal} price: $${saucePrice}`;
+    document.getElementById('sauce-reciept').value = `${selectedSauceFinal} price: - $${saucePrice}`;
 
     return saucePrice;
 
 
 }
 
-// function getSelectedMeat()
-// {
-//     var selectedMeat = document.getElementsByClassName('meat-choice');
+function getSelectedMeat()
+{
+    var selectedMeat = document.getElementsByClassName('meat-choice');
 
-//     var selectedMeatFinal
+    var selectedMeatFinal = '';
+    
+    for (i = 0; i < 6; i++) {
+        
+        if (selectedMeat[i].checked === true ) {
+            selectedMeatFinal += selectedMeat[i].value + " - ";
+            
+        }
+    }
+    toppingsFinal += selectedMeatFinal;
+    
+    
+    
+    
+}
 
-//     for (i = 0; i < 6; i++) {
+function getSelectedVeggies()
+{
+    var selectedVeggie = document.getElementsByClassName('veggie-choice');
+    console.log(selectedVeggie);
+    
+    var selectedVeggieFinal = '';
+    
+    for (i = 0; i < 8; i++) {
+        
+        if (selectedVeggie[i].checked === true ) {
+            selectedVeggieFinal += selectedVeggie[i].value + " - ";
+            
+        }
+    }
+    
+    toppingsFinal += selectedVeggieFinal;
+    
+    
+}
 
-//         if (selectedMeat[i].checked === true ) {
-//             selectedMeatFinal += selectedMeat[i].value + " ";   //SelectedMeatFinal is simply used to plug into the DOM to display the information as string seperated by spaces and commas
-
-//         }
-//     }
-
-//     var meatPrice;
-//     if (selectedMeatFinal > 1) {
-//         //Then selectedMeatFinal price is equal to array.length *1
-//     } 
-//     else {
-//         //selectedMeatFinal price (which is meatPrice) is equal to 0.00
-//     }
-
-
-// }
-
-// function getSelectedVeggies()
-// {
-//     var selectedVeggie = document.getElementsByClassName('veggie-choice');
-
-//     var selectedVeggieFinal
-
-//     for (i = 0; i < 8; i++) {
-
-//         if (selectedVeggie[i].checked === true ) {
-//             selectedVeggieFinal += selectedVeggie[i].value + " ";   //SelectedVeggieFinal is simply used to plug into the DOM to display the information as string seperated by spaces and commas
-
-//         }
-//     }
-
-//     var veggiePrice;
-//     if (selectedVeggieFinal > 1) {
-//         //Then selectedMeatFinal price is equal to array.length *1
-//     } 
-//     else {
-//         //selectedMeatFinal price (which is meatPrice) is equal to 0.00
-//     }
-
-
-
-// }
-
-function getFullPrice()
+function getFullPrice() //Not finished
 {
     fullPrice = sizePrice + cheesePrice + crustPrice;
-    console.log(fullPrice);
+    
+    document.getElementById('total-price').value = `$${fullPrice}`;
 }
+
+function clearInput(){
+    // var clear = document.querySelectorAll("input[type='text']")
+
+    // for (i =0; i < clear.length; i++ )
+    // {
+    //     clear[i].value = '';
+
+    // }
+
+    //Better way
+    document.querySelectorAll("input[type='text']").forEach(function(el){
+        el.value=''
+    });
+
+
+
+}
+
 
 

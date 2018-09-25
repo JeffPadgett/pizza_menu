@@ -75,7 +75,7 @@
                             <h5 class="text-center">Veggies</h5>
                             <ul class="veggie-list">
                                 <div class="checkbox d-inline-block">
-                                    <label><input type="checkbox" name="veggieTopping" value="Tomatoes">Tomatoes</label>
+                                    <label><input class="veggie-choice" type="checkbox" name="veggieTopping" value="Tomatoes">Tomatoes</label>
                                 </div>
                                 <div class="checkbox d-inline-block">
                                     <label><input class="veggie-choice" type="checkbox" name="veggieTopping" value="Onions">Onions</label>
@@ -136,7 +136,7 @@
                         </div>
 
                         <div class="col-md-4 col-sm-4 col-frame d-flex justify-content-center">
-                                <input type="submit" class="btn btn-danger btn-lg my-button" value="Cancel">
+                                <input type="button" id='clear-button' form='entire-form' class="btn btn-danger btn-lg my-button" value="Clear">
                         </div>
 
                         <!-- End of buttons-->
@@ -216,13 +216,13 @@
                                 </div>
                                 <div class="input-group">
                                     <span class="input-group-addon toppings-room">Toppings:&nbsp;&nbsp;</span>
-                                    <input type="text" class="form-control toppings-padding" id="Toppings Price" value="" disabled>
+                                    <textarea type="text" class="form-control toppings-padding" id="toppings-price" value="" disabled></textarea>
                                 </div>                                    
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-4 col-frame">
                             <h5 class="text-center">Total Price</h5>
-                            <input type="number" class="form-control price-corner" id="total-Price" disabled>
+                            <input type="text" class="form-control price-corner" id="total-price" value="" disabled>
                         </div>
                     </div>
                                 
