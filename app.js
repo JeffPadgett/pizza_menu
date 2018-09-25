@@ -15,15 +15,21 @@ let selectedSauceFinal;
 var sizePrice;
 var cheesePrice;
 var crustPrice;
+var meatPrice;
+var veggiePrice;
+var toppingsPrice;
 var fullPrice;
 var selectedVeggieFinal;
 var selectedMeatFinal;
-var selectedVeggieFinal;
 var toppingsFinal = '';
 
 
 
 
+cancelBtn.onclick = function()
+{
+    clearInput();
+}
 makePizzaBtn.onclick = function(){
     getSelectedPizza();
     getSelectedCheese();
@@ -31,13 +37,9 @@ makePizzaBtn.onclick = function(){
     getSelectedSauce();
     getSelectedMeat();
     getSelectedVeggies();
-    document.getElementById('toppings-price').value = `${toppingsFinal}`;
     getFullPrice();
+    document.getElementById('toppings-price').value = `${toppingsFinal} price: $${toppingsPrice}`;
 
-}
-cancelBtn.onclick = function()
-{
-    clearInput();
 }
 
 function getSelectedPizza(){
@@ -224,17 +226,27 @@ function getSelectedMeat()
             
         }
     }
-    toppingsFinal += selectedMeatFinal;
+    toppingsFinal += selectedMeatFinal; 
+
+    // Establishes the price 
+
+    meatArray = document.querySelectorAll('input[name="meatTopping"]:checked');
     
-    
-    
+    if (meatArray.length > 1) {
+
+        meatPrice = meatArray.length - 1;
+
+    }
+    else {
+        meatPrice = 0;
+    }
+     
     
 }
 
 function getSelectedVeggies()
 {
     var selectedVeggie = document.getElementsByClassName('veggie-choice');
-    console.log(selectedVeggie);
     
     var selectedVeggieFinal = '';
     
@@ -247,13 +259,28 @@ function getSelectedVeggies()
     }
     
     toppingsFinal += selectedVeggieFinal;
+
+        // Establishes the price 
+
+        veggieArray = document.querySelectorAll('input[name="veggieTopping"]:checked');
+    
+        if (veggieArray.length > 1) {
+    
+            veggiePrice = veggieArray.length - 1;
+    
+        }
+        else {
+            veggiePrice = 0;
+        }
     
     
 }
 
 function getFullPrice() //Not finished
 {
-    fullPrice = sizePrice + cheesePrice + crustPrice;
+    toppingsPrice = meatPrice + veggiePrice;
+    fullPrice = sizePrice + cheesePrice + crustPrice + meatPrice + veggiePrice;
+    
     
     document.getElementById('total-price').value = `$${fullPrice}`;
 }
@@ -273,8 +300,21 @@ function clearInput(){
     });
 
 
+    //clears individual toppings
+    selectedVeggieFinal = '';
+    selectedMeatFinal = '';
+    toppingsFinal = '';
+
+    document.getElementById('toppings-price').value = '';
+
+    //clears price
+    document.getElementById('total-price').value = '';
 
 }
+
+
+
+
 
 
 
