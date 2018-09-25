@@ -13,6 +13,8 @@ let selectedCheeseFinal;
 let selectedCrustFinal;
 let selectedSauceFinal;
 var sizePrice;
+var cheesePrice;
+var crustPrice;
 
 
 
@@ -21,6 +23,9 @@ makePizzaBtn.onclick = function(){
     getSelectedCheese();
     getSelectedCrust();
     getSelectedSauce();
+    // getSelectedMeat();
+    // getSelectedVeggies();
+    getFullPrice();
 
 }
 function getSelectedPizza(){
@@ -28,16 +33,16 @@ function getSelectedPizza(){
 
     for (var i = 0, length = selectedPizza.length; i < length; i++)
     {
-     if (selectedPizza[i].checked)
-     {
+
+
+        if (selectedPizza[i].checked) 
+        {
          selectedPizzaFinal = selectedPizza[i].value;    
-         
-         
+        
          break;
         }
     }
     
-    var sizePrice;
     
     switch(selectedPizzaFinal){
         
@@ -72,21 +77,17 @@ function getSelectedCheese(){
 
     for (var i = 0, length = selectedCheese.length; i < length; i++)
     {
-        if (selectedCheese[i].checked)
-        {
-            document.getElementById('cheese-reciept').value = selectedCheese[i].value;
-
-            selectedCheeseFinal = selectedCheese[i].value;
-
-            break;
-        }
+    
+            if (selectedCheese[i].checked) 
+            {
+             selectedCheeseFinal = selectedCheese[i].value;    
+            
+             break;
+            }
     }
 
-    var cheesePrice;
     
     switch(selectedCheeseFinal){
-        default: cheesePrice = 1.00;
-        break;
         
         case "Regular Cheese":
         cheesePrice = 0.00;
@@ -122,11 +123,9 @@ function getSelectedCrust(){
         }
     }
 
-    var crustPrice;
+
     
     switch(selectedCrustFinal){
-        default: crustPrice = 1.00;
-        break;
         
         case "Plain Crust":
         crustPrice = 0.00 ;
@@ -173,7 +172,7 @@ function getSelectedSauce(){
     
     switch(selectedSauceFinal){
         
-        case "Marina Sauce":
+        case "Marinara Sauce":
         saucePrice = 0.00 ;
         break;
         
@@ -198,7 +197,63 @@ function getSelectedSauce(){
     return saucePrice;
 
 
-
-
-
 }
+
+// function getSelectedMeat()
+// {
+//     var selectedMeat = document.getElementsByClassName('meat-choice');
+
+//     var selectedMeatFinal
+
+//     for (i = 0; i < 6; i++) {
+
+//         if (selectedMeat[i].checked === true ) {
+//             selectedMeatFinal += selectedMeat[i].value + " ";   //SelectedMeatFinal is simply used to plug into the DOM to display the information as string seperated by spaces and commas
+
+//         }
+//     }
+
+//     var meatPrice;
+//     if (selectedMeatFinal > 1) {
+//         //Then selectedMeatFinal price is equal to array.length *1
+//     } 
+//     else {
+//         //selectedMeatFinal price (which is meatPrice) is equal to 0.00
+//     }
+
+
+// }
+
+// function getSelectedVeggies()
+// {
+//     var selectedVeggie = document.getElementsByClassName('veggie-choice');
+
+//     var selectedVeggieFinal
+
+//     for (i = 0; i < 8; i++) {
+
+//         if (selectedVeggie[i].checked === true ) {
+//             selectedVeggieFinal += selectedVeggie[i].value + " ";   //SelectedVeggieFinal is simply used to plug into the DOM to display the information as string seperated by spaces and commas
+
+//         }
+//     }
+
+//     var veggiePrice;
+//     if (selectedVeggieFinal > 1) {
+//         //Then selectedMeatFinal price is equal to array.length *1
+//     } 
+//     else {
+//         //selectedMeatFinal price (which is meatPrice) is equal to 0.00
+//     }
+
+
+
+// }
+
+function getFullPrice()
+{
+    fullPrice = sizePrice + cheesePrice + crustPrice;
+    console.log(fullPrice);
+}
+
+
